@@ -49,7 +49,7 @@ function render() {
 
         const cardImg = document.createElement('img');
         cardImg.setAttribute('class', 'img');
-        cardImg.setAttribute('src', './img/cat.jpg');
+        cardImg.setAttribute('src', `./img/cat1.jpg`);
         cardBorder.appendChild(cardImg);
 
         const cardText = document.createElement('div');
@@ -93,7 +93,7 @@ function render() {
 }
 
 function remove() {
-    const idx = allPost.find(item => item.len == event.srcElement.id);
+    const idx = allPost.find(item => item.len == event.target.id);
 
     if (idx) {
         allPost.splice(

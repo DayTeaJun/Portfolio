@@ -6,3 +6,4 @@ https://dayteajun.github.io/Portfolio/Portfolio_page/
 https://dayteajun.github.io/Portfolio/Portfolio_page/
 
 ## Web Notepad
+https://dayteajun.github.io/Portfolio/Web_Notepad/
