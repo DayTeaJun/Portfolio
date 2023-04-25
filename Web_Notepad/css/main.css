@@ -104,7 +104,7 @@ section form{
 /* 샘플 */
 section .card-item {
     margin-top: 10px;
-    width: calc((100% - (20px * 1)) / 2);
+    width: calc((100% - (20px)) / 2);
     max-height: 350px;
     position: relative;
     border-radius: 8px;
@@ -212,11 +212,13 @@ section p {
 
 .sequence {
     font-size: 0.6em;
+    color: black;
 }
 
 .underline {
     text-decoration: underline;
     font-size: 0.6em;
+    color: black;
 }
 
 /* 반응형 */
