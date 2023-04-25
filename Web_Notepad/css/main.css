@@ -36,7 +36,7 @@ body {
     max-width: 1280px;
     display: flex;
     margin: 0 auto;
-    padding: 1.5em 0;
+    padding: 1.5em;
 }
 
 header {
@@ -95,6 +95,10 @@ section form{
     transition: .4s;
 }
 
+.inp-btn.reset {
+    background-color:rgb(94, 76, 76);
+}
+
 .inp-btn:hover {
     background-color: rgb(133, 133, 133);
     color: black;
@@ -105,13 +109,6 @@ section form{
 section .card-item {
     margin-top: 10px;
     width: calc((100% - (20px)) / 2);
-    max-height: 350px;
-    position: relative;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: .2s;
 }
 
 section p {
@@ -128,8 +125,7 @@ section p {
     flex-wrap: wrap;
 }
 
-.article-container .card-item {
-    width: calc((100% - (20px * 2)) / 3);
+.card-item {
     max-height: 350px;
     position: relative;
     border-radius: 8px;
@@ -137,6 +133,10 @@ section p {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: .2s;
+}
+
+.article-container .card-item {
+    width: calc((100% - (20px * 2)) / 3);
 }
 
 .card-item:hover {
@@ -222,14 +222,27 @@ section p {
 }
 
 /* 반응형 */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .l-wrap {
         flex-direction: column;
         gap: 0;
     }
     section {
+        display: flex;
+        min-width: 100%;
+        max-width: 100%;
         border-right: 0;
+        border-bottom: solid 1px #d2e9ef;;
         padding-right: 0;
         min-height: auto;
     }
+
+    .article-container {
+    max-width: 1280px;
+    padding-left: 20px;
+    display: flex;
+    gap: 20px;
+     /* wrap : 줄바꿈처리 */
+    flex-wrap: wrap;
 }
+} */

@@ -108,3 +108,9 @@ function remove() {
 function postLink() {
     alert('게시물 구현이 아직 준비되지 않았습니다!');
 }
+
+function deleteAll() {
+    allPost.splice(0);
+    localStorage.setItem("allPost", JSON.stringify(allPost));
+    render();
+}
