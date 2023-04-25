@@ -115,6 +115,7 @@ section .card-item {
 }
 
 section p {
+    color: #fff;
     font-weight: bold;
 }
 
@@ -219,3 +220,14 @@ section p {
 }
 
 /* 반응형 */
+@media (max-width: 1024px) {
+    .l-wrap {
+        flex-direction: column;
+        gap: 0;
+    }
+    section {
+        border-right: 0;
+        padding-right: 0;
+        min-height: auto;
+    }
+}
