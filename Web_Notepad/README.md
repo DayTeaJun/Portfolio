@@ -1,6 +1,6 @@
 # Web Notepad
 ## Web Notepad
-(Web_Notepad Page)[https://dayteajun.github.io/Portfolio/Web_Notepad/]
+[Web_Notepad Page](https://dayteajun.github.io/Portfolio/Web_Notepad/)
 
 ![image](https://user-images.githubusercontent.com/108723143/234613506-df8f50f4-d0d2-43bd-91c1-dfdbfa18e96d.png)
 ![image](https://user-images.githubusercontent.com/108723143/234612458-c8cf7a3a-5386-4f23-9661-36192357a334.png)
