@@ -23,8 +23,14 @@
                 <label for="title-txt" class="a11y-hidden">제목</label>
                 <input type="text" id="title-txt" class="inp-title" placeholder="제목">
 
-                <textarea id="content-textarea" placeholder="내용을 입력하세요."></textarea>
-                <!-- <input type="file" id="fileInput" /> -->
+                <textarea rows="6" id="content-textarea" placeholder="내용을 입력하세요."></textarea>
+
+                <div class="filebox">
+                    <input class="upload-name" value="이미지 업로드" placeholder="이미지 업로드">
+                    <label for="file">파일찾기</label>
+                    <input type="file" id="file" class="inp-file">
+                </div>
+
                 <button class="inp-btn" type="submit">메모 등록</button>
                 <button onclick="deleteAll()" class="inp-btn reset" type="button">초기화</button>
             </form>
@@ -50,9 +56,10 @@
         </section>
 
         <article class="article-container">
+
             <!-- 카드 샘플, 페이지 로드시 로드되지 않음, js로 만들건데 미리 html문서에 작성 -->
-            <article class="card-item">
-                <!-- javascript:void(0); : 링크 클릭 시 다른 페이지 또는 페이지가 다시 로딩되지 않게 함 -->
+            <!-- <article class="card-item">
+                javascript:void(0); : 링크 클릭 시 다른 페이지 또는 페이지가 다시 로딩되지 않게 함
                 <a href="javascript:void(0);" class="card-border">
                     <img class="card-img" src="./img/cat1.jpg" alt="고양이사진입니다">
                     <div class="card-text">
@@ -65,12 +72,10 @@
                     </div>
                 </a>
                 <button class="close" type="button">x</button>
-            </article>
+            </article> -->
         </article>
     </div>
 
-
-    <!-- <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script> -->
     <script src="./js/post.js"></script>
 </body>
 
