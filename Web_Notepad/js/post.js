@@ -53,6 +53,7 @@ function render() {
         const cardImg = document.createElement('img');
         cardImg.setAttribute('class', 'img');
         cardImg.setAttribute('src', './img/cat1.jpg');
+        cardImg.setAttribute('alt', '고양이사진입니다');
         cardBorder.appendChild(cardImg);
 
         const cardText = document.createElement('div');
@@ -120,5 +121,5 @@ function postLink() {
 fileInput.addEventListener('change', function () {
     const fileName = fileInput.value.split('\\').pop();
     uploadNameInput.value = fileName;
-    alert('로컬스토리지에 일정 이상의 이미지파일을 넣으면 크기가 너무 커서\n에러가 발생합니다.\n구현예정입니다.');
+    alert('로컬스토리지에 일정 이상의 이미지파일을 넣으면\n크기가 너무 커서에러가 발생합니다.\n\n구현예정입니다.');
 });
