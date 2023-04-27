@@ -174,12 +174,16 @@ section form {
 
 /* 샘플 */
 .dec .card-item {
-  width: 45%;
+  width: 50%;
+}
+
+.dec .card-item .cover-img{
+  min-height: 100px;
 }
 
 .article-container .card-item {
   width: calc((100% - (20px * 3)) / 4);
-  height: 350px;
+  height: 330px;
 }
 
 .card-item:hover {
@@ -201,7 +205,17 @@ section p {
   font-weight: bold;
 }
 
+.card-item .cover-img {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+}
+
 .card-item .card-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
 }
 
@@ -300,19 +314,23 @@ section p {
     width: 100%;
     min-height: 225px;
   }
+
+  .dec .card-item .cover-img{
+    min-height: 200px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1300px) {
   .article-container .card-item {
     width: calc((100% - (20px * 2)) / 3);
-    min-height: 400px;
+    min-height: 300px;
   }
 }
 
 @media (min-width: 1080px) and (max-width: 1199px) {
   .article-container .card-item {
     width: calc((100% - (20px)) / 2);
-    min-height: 550px;
+    min-height: 380px;
   }
 
   .card-text .title + p {
@@ -327,7 +345,7 @@ section p {
 
   .article-container .card-item {
     width: calc(100%);
-    min-height: 700px;
+    min-height: 380px;
   }
 
   .card-text .title + p {
@@ -364,6 +382,10 @@ section p {
     min-height: 225px;
   }
 
+  .dec .card-item .cover-img{
+    min-height: 300px;
+  }
+
   .article-container {
     width: 423px;
     padding-top: 20px;
@@ -379,7 +401,11 @@ section p {
   .article-container .card-item {
     margin: 0 auto;
     width: 100%;
-    min-height: 570px;
+    min-height: 400px;
+  }
+
+  .card-item .cover-img {
+    min-height: 250px;
   }
 
   .card-item:hover {

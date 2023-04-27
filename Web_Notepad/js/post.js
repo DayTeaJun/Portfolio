@@ -8,11 +8,11 @@ const imgSelect = document.querySelector('#img-select');
 const uploadNameInput = document.querySelector('.upload-name');
 
 const IMG_PATH = {
-  cat1: './img/cat1.png',
+  cat1: './img/cat1.jpg',
   cat2: './img/cat2.png',
   cat3: './img/cat3.png',
-  cat4: './img/cat4.png',
-  cat5: './img/cat5.png',
+  cat4: './img/cat4.jpg',
+  cat5: './img/cat5.jpg',
 };
 
 let allPost = JSON.parse(localStorage.getItem('allPost'));
@@ -56,11 +56,15 @@ function render() {
     cardBorder.setAttribute('onclick', 'postLink()');
     cardItem.appendChild(cardBorder);
 
+    const coverImg = document.createElement('div');
+    coverImg.setAttribute('class', 'cover-img');
+    cardBorder.appendChild(coverImg);
+
     const cardImg = document.createElement('img');
-    cardImg.setAttribute('class', 'img');
+    cardImg.setAttribute('class', 'card-img');
     cardImg.setAttribute('src', IMG_PATH[item.img]);
-    cardImg.setAttribute('alt', '홀로멤');
-    cardBorder.appendChild(cardImg);
+    cardImg.setAttribute('alt', '고양이사진');
+    coverImg.appendChild(cardImg);
 
     const cardText = document.createElement('div');
     cardText.setAttribute('class', 'card-text');
