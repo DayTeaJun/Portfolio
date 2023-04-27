@@ -8,11 +8,11 @@ const imgSelect = document.querySelector('#img-select');
 const uploadNameInput = document.querySelector('.upload-name');
 
 const IMG_PATH = {
-  ame: './img/ame.png',
-  gura: './img/gura.png',
-  ina: './img/ina.png',
-  kiara: './img/kiara.png',
-  calli: './img/calli.png',
+  cat1: './img/cat1.png',
+  cat2: './img/cat2.png',
+  cat3: './img/cat3.png',
+  cat4: './img/cat4.png',
+  cat5: './img/cat5.png',
 };
 
 let allPost = JSON.parse(localStorage.getItem('allPost'));
