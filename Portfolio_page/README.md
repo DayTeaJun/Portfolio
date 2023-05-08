@@ -5,5 +5,6 @@
 ![image](https://user-images.githubusercontent.com/108723143/236813682-da060076-d721-4a04-9e5d-c5dccc88250f.png)
 
 ## 반응형
-![image](https://user-images.githubusercontent.com/108723143/236816219-7896803e-e9b8-47fc-a186-858ca13ee260.png)
-![image](https://user-images.githubusercontent.com/108723143/236816646-065628f2-5339-47ee-afcc-d0764432c9be.png)
+![image](https://user-images.githubusercontent.com/108723143/236816827-e7ed6876-ae98-40c8-b075-c6701745313e.png)
+![image](https://user-images.githubusercontent.com/108723143/236816931-33dad158-27b1-4a23-b592-5b0b60e588a1.png)
+
