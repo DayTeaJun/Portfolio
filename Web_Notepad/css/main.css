@@ -320,7 +320,7 @@ section p {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: 1200px) and (max-width: 1299px) {
   .article-container .card-item {
     width: calc((100% - (20px * 2)) / 3);
     min-height: 300px;
