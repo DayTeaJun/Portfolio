@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.01a53741.js",
-    "static/media/img.gif": "/static/media/img.9ccd07478297ae820f89.gif",
-    "index.html": "/index.html",
-    "main.01a53741.js.map": "/static/js/main.01a53741.js.map"
+    "main.js": "/Portfolio/Web_notepad_React/WebNotePad_Build/static/js/main.c305d1a5.js",
+    "static/media/img.gif": "/Portfolio/Web_notepad_React/WebNotePad_Build/static/media/img.9ccd07478297ae820f89.gif",
+    "index.html": "/Portfolio/Web_notepad_React/WebNotePad_Build/index.html",
+    "main.c305d1a5.js.map": "/Portfolio/Web_notepad_React/WebNotePad_Build/static/js/main.c305d1a5.js.map"
   },
   "entrypoints": [
-    "static/js/main.01a53741.js"
+    "static/js/main.c305d1a5.js"
   ]
 }

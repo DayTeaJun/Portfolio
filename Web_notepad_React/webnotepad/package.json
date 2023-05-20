@@ -22,6 +22,7 @@
     "serve": "serve -s build",
     "build-and-serve": "npm run build && npm run serve"
   },
+  "homepage": "https://dayteajun.github.io/Portfolio/Web_notepad_React/WebNotePad_Build/",
   "eslintConfig": {
     "extends": [
       "react-app",
