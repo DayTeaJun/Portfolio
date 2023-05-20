@@ -1,13 +1,17 @@
 # 포트폴리오 링크 모음
 
-## Portfolio Page
+## Web Notepad Migration & Refactoring (React)
 
-https://dayteajun.github.io/Portfolio/Portfolio_page/
+https://dayteajun.github.io/Portfolio/Web_notepad_React/WebNotePad_Build/
 
-## Vending Mechine
+## Web Notepad (Vanilla JavaScript)
+
+https://dayteajun.github.io/Portfolio/Web_Notepad/
+
+## Vending Mechine (Vanilla JavaScript)
 
 https://dayteajun.github.io/Vending-Machine/Vending-JS/
 
-## Web Notepad
+## Portfolio Page (HTML/CSS)
 
-https://dayteajun.github.io/Portfolio/Web_Notepad/
+https://dayteajun.github.io/Portfolio/Portfolio_page/
