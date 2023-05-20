@@ -6,9 +6,9 @@ import loadingImg from "../../Image/img.gif";
 
 export default function Main() {
   const [formData, setFormData] = useState([]);
+  const [imgCard, setImgCard] = useState([]);
   const [userCard, setUserCard] = useState(false);
   const [cardNumber, setCardNumber] = useState(0);
-  const [imgCard, setImgCard] = useState([]);
   const [imgPage, setImgPage] = useState(70);
   const [loading, setLoading] = useState(false);
 
@@ -30,6 +30,7 @@ export default function Main() {
 
   useEffect(() => {
     fetchImg();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardNumber]);
 
   useEffect(() => {
