@@ -17,6 +17,11 @@ ${reset}
   font-family: 'TheJamsil5Bold';
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 a,
 button {
   cursor: pointer;
@@ -42,4 +47,4 @@ img {
 body {
   background-color: #012638;
 }
-`
+`;
