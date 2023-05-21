@@ -12,15 +12,24 @@ export default function Main() {
   const [imgPage, setImgPage] = useState(70);
   const [loading, setLoading] = useState(false);
 
-  console.log(loading);
+  // console.log(loading);
+  console.log(formData);
 
   const addFormData = (data) => {
     setFormData((prevForm) => {
       return [...prevForm, ...[data]];
     });
-    setUserCard(true);
   };
-  console.log(formData);
+
+  useEffect(() => {
+    setUserCard(true);
+  });
+
+  const delFormData = (data) => {
+    setFormData(data);
+    setUserCard(false);
+    console.log(formData);
+  };
 
   const increaseNumber = () => {
     setCardNumber((prevNumber) => {
@@ -49,7 +58,8 @@ export default function Main() {
         throw new Error("네트워크 응답이 되지 않았어요!");
       }
       const data = await response.json();
-      setImgCard(data);
+      setImgCard(data[0].download_url);
+      console.log(formData);
       setLoading(false);
     } catch (error) {
       console.log("데이터 받아오기 문제 발생 : ", error);
@@ -63,6 +73,8 @@ export default function Main() {
           addFormData={addFormData}
           increaseNumber={increaseNumber}
           imgCard={imgCard}
+          formData={formData}
+          setFormData={setFormData}
         />
 
         <article className="desContainer">
@@ -72,7 +84,7 @@ export default function Main() {
       </section>
 
       <article className="container">
-        {userCard && <Card formData={formData} />}
+        {userCard && <Card formData={formData} delFormData={delFormData} />}
         {loading && <img src={loadingImg} alt="" className="imgLoading" />}
       </article>
     </MainStyle>

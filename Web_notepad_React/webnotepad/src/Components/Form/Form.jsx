@@ -1,7 +1,13 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-export default function Form({ addFormData, increaseNumber, imgCard }) {
+export default function Form({
+  addFormData,
+  increaseNumber,
+  imgCard,
+  formData,
+  setFormData,
+}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const titleName = useRef();
@@ -17,21 +23,26 @@ export default function Form({ addFormData, increaseNumber, imgCard }) {
       contentName.current.focus();
     } else {
       const createFormData = {
+        len: formData.length,
         title: title,
         content: content,
-        img: { ...imgCard },
+        img: imgCard,
       };
 
       // console.log(addFormData);
       addFormData(createFormData);
       increaseNumber();
-      memoReset();
+      contentReset();
     }
   }
 
-  function memoReset() {
+  function contentReset() {
     setTitle("");
     setContent("");
+  }
+
+  function memoReset() {
+    setFormData([]);
   }
 
   return (

@@ -1,29 +1,29 @@
-const inpTitle = document.querySelector('.inp-title');
-const contentText = document.querySelector('#content-textarea');
-const inpBtn = document.querySelector('.inp-btn');
+const inpTitle = document.querySelector(".inp-title");
+const contentText = document.querySelector("#content-textarea");
+const inpBtn = document.querySelector(".inp-btn");
 const today = new Date();
-const fileInput = document.querySelector('.inp-file');
-const imgSelect = document.querySelector('#img-select');
+const fileInput = document.querySelector(".inp-file");
+const imgSelect = document.querySelector("#img-select");
 
-const uploadNameInput = document.querySelector('.upload-name');
+const uploadNameInput = document.querySelector(".upload-name");
 
 const IMG_PATH = {
-  cat1: './img/cat1.jpg',
-  cat2: './img/cat2.png',
-  cat3: './img/cat3.png',
-  cat4: './img/cat4.jpg',
-  cat5: './img/cat5.jpg',
+  cat1: "./img/cat1.jpg",
+  cat2: "./img/cat2.png",
+  cat3: "./img/cat3.png",
+  cat4: "./img/cat4.jpg",
+  cat5: "./img/cat5.jpg",
 };
 
-let allPost = JSON.parse(localStorage.getItem('allPost'));
+let allPost = JSON.parse(localStorage.getItem("allPost"));
 allPost = allPost ?? [];
 render();
 
-inpBtn.addEventListener('click', function (e) {
+inpBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
-  if (!inpTitle.value) alert('제목을 입력해 주세요!');
-  else if (!contentText.value) alert('내용을 입력해 주세요!');
+  if (!inpTitle.value) alert("제목을 입력해 주세요!");
+  else if (!contentText.value) alert("내용을 입력해 주세요!");
   else {
     const title = inpTitle.value;
     const img = imgSelect.value;
@@ -31,81 +31,82 @@ inpBtn.addEventListener('click', function (e) {
     const date = today.toISOString().slice(0, 10);
 
     allPost.push({ title, img, content, date, len: allPost.length });
-    localStorage.setItem('allPost', JSON.stringify(allPost));
-    inpTitle.value = '';
-    contentText.value = '';
-    uploadNameInput.value = '';
+    localStorage.setItem("allPost", JSON.stringify(allPost));
+    inpTitle.value = "";
+    contentText.value = "";
+    uploadNameInput.value = "";
     render();
   }
 });
 
 function render() {
-  const articleContainer = document.querySelector('.article-container');
-  articleContainer.innerHTML = '';
+  const articleContainer = document.querySelector(".article-container");
+  articleContainer.innerHTML = "";
   let count = 0;
 
   for (const item of allPost) {
     count += 1;
 
-    const cardItem = document.createElement('article');
-    cardItem.setAttribute('class', 'card-item');
+    const cardItem = document.createElement("article");
+    cardItem.setAttribute("class", "card-item");
     articleContainer.appendChild(cardItem);
 
-    const cardBorder = document.createElement('a');
-    cardBorder.setAttribute('title', `${count}번 카드입니다.`);
-    cardBorder.setAttribute('onclick', 'postLink()');
+    const cardBorder = document.createElement("a");
+    cardBorder.setAttribute("title", `${count}번 카드입니다.`);
+    cardBorder.setAttribute("onclick", "postLink()");
     cardItem.appendChild(cardBorder);
 
-    const coverImg = document.createElement('div');
-    coverImg.setAttribute('class', 'cover-img');
+    const coverImg = document.createElement("div");
+    coverImg.setAttribute("class", "cover-img");
     cardBorder.appendChild(coverImg);
 
-    const cardImg = document.createElement('img');
-    cardImg.setAttribute('class', 'card-img');
-    cardImg.setAttribute('src', IMG_PATH[item.img]);
-    cardImg.setAttribute('alt', '고양이사진');
+    const cardImg = document.createElement("img");
+    cardImg.setAttribute("class", "card-img");
+    cardImg.setAttribute("src", IMG_PATH[item.img]);
+    cardImg.setAttribute("alt", "고양이사진");
     coverImg.appendChild(cardImg);
 
-    const cardText = document.createElement('div');
-    cardText.setAttribute('class', 'card-text');
+    const cardText = document.createElement("div");
+    cardText.setAttribute("class", "card-text");
     cardBorder.appendChild(cardText);
 
-    const title = document.createElement('h2');
-    title.setAttribute('class', 'title');
+    const title = document.createElement("h2");
+    title.setAttribute("class", "title");
     cardText.appendChild(title);
     title.textContent = item.title;
 
-    const content = document.createElement('p');
-    content.setAttribute('class', 'content');
+    const content = document.createElement("p");
+    content.setAttribute("class", "content");
     cardText.appendChild(content);
     content.textContent = item.content;
 
-    const cardFooter = document.createElement('div');
-    cardFooter.setAttribute('class', 'card-footer');
+    const cardFooter = document.createElement("div");
+    cardFooter.setAttribute("class", "card-footer");
     cardText.appendChild(cardFooter);
 
-    const sequence = document.createElement('p');
-    sequence.setAttribute('class', 'sequence');
+    const sequence = document.createElement("p");
+    sequence.setAttribute("class", "sequence");
     cardFooter.appendChild(sequence);
     sequence.textContent = `${count}번 카드`;
 
-    const underline = document.createElement('p');
-    underline.setAttribute('class', 'underline');
+    const underline = document.createElement("p");
+    underline.setAttribute("class", "underline");
     cardFooter.appendChild(underline);
     underline.textContent = item.date;
 
-    const deletePostBtn = document.createElement('button');
-    deletePostBtn.setAttribute('class', 'close');
-    deletePostBtn.setAttribute('title', '닫기버튼입니다.');
-    deletePostBtn.setAttribute('id', item.len);
-    deletePostBtn.setAttribute('onclick', 'remove()');
+    const deletePostBtn = document.createElement("button");
+    deletePostBtn.setAttribute("class", "close");
+    deletePostBtn.setAttribute("title", "닫기버튼입니다.");
+    deletePostBtn.setAttribute("id", item.len);
+    deletePostBtn.setAttribute("onclick", "remove()");
     cardItem.appendChild(deletePostBtn);
-    deletePostBtn.textContent = '✖️';
+    deletePostBtn.textContent = "✖️";
   }
 }
 
 function remove() {
   const idx = allPost.find((item) => item.len == event.target.id);
+  console.log(allPost);
 
   if (idx) {
     allPost.splice(
@@ -114,24 +115,24 @@ function remove() {
     );
   }
 
-  localStorage.setItem('allPost', JSON.stringify(allPost));
+  localStorage.setItem("allPost", JSON.stringify(allPost));
   render();
 }
 
 function deleteAll() {
   allPost.splice(0);
-  localStorage.setItem('allPost', JSON.stringify(allPost));
+  localStorage.setItem("allPost", JSON.stringify(allPost));
   render();
 }
 
 function postLink() {
-  alert('게시물 구현이 아직 준비되지 않았습니다!');
+  alert("게시물 구현이 아직 준비되지 않았습니다!");
 }
 
-fileInput.addEventListener('change', function () {
-  const fileName = fileInput.value.split('\\').pop();
+fileInput.addEventListener("change", function () {
+  const fileName = fileInput.value.split("\\").pop();
   uploadNameInput.value = fileName;
   alert(
-    '로컬스토리지에 일정 이상의 이미지파일을 넣으면\n크기가 너무 커서에러가 발생합니다.\n\n구현예정입니다.'
+    "로컬스토리지에 일정 이상의 이미지파일을 넣으면\n크기가 너무 커서에러가 발생합니다.\n\n구현예정입니다."
   );
 });

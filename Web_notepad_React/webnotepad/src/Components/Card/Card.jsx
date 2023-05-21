@@ -6,6 +6,22 @@ export default function Card(props) {
   const today = new Date();
   const date = today.toISOString().slice(0, 10);
 
+  const cardDel = (e) => {
+    const idx = props.formData.find((item) =>
+      console.log(item.len === e.target.id)
+    );
+
+    // console.log(props.formData[2].len);
+
+    if (idx) {
+      props.formData.splice(
+        props.formData.findIndex((item) => item.len === true),
+        1
+      );
+      props.delFormData(props.formData);
+    }
+  };
+
   return (
     <>
       {props.formData === undefined ? (
@@ -29,12 +45,12 @@ export default function Card(props) {
         </CardStyle>
       ) : (
         props.formData.map((item, index) => {
-          // console.log(item.img[index].download_url);
+          console.log(item.img);
           return (
-            <CardStyle {...props} key={item.img[0].id}>
+            <CardStyle {...props} key={index}>
               <ul>
                 <li className="coverImg">
-                  <img src={item.img[0].download_url} alt="카드사진" />
+                  <img src={item.img} alt="카드사진" />
                 </li>
                 <li className="cardText">
                   <h2>{item.title}</h2>
@@ -44,7 +60,9 @@ export default function Card(props) {
                     <p>{date}</p>
                   </div>
                 </li>
-                <button type="button">✖️</button>
+                <button id={index} onClick={cardDel} type="button">
+                  ✖️
+                </button>
               </ul>
             </CardStyle>
           );
@@ -56,7 +74,7 @@ export default function Card(props) {
 
 const CardStyle = styled.article`
   width: ${({ dec }) =>
-    dec === true ? `50%` : `calc((100% - (20px * 3)) / 4)`};
+    dec === true ? `50%` : `calc((1100px - (20px * 3)) / 4)`};
   height: ${({ dec }) => (dec === true ? `auto` : `330px`)};
 
   position: relative;
