@@ -7,9 +7,7 @@ export default function Card(props) {
   const date = today.toISOString().slice(0, 10);
 
   const cardDel = (e) => {
-    const idx = props.formData.find((item) =>
-      console.log(item.len === e.target.id)
-    );
+    const idx = props.formData.find((item) => item.len == e.target.id);
 
     // console.log(props.formData[2].len);
 
@@ -45,7 +43,7 @@ export default function Card(props) {
         </CardStyle>
       ) : (
         props.formData.map((item, index) => {
-          console.log(item.img);
+          // console.log(item.img);
           return (
             <CardStyle {...props} key={index}>
               <ul>

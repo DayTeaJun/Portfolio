@@ -58,6 +58,7 @@ export default function Main() {
         throw new Error("네트워크 응답이 되지 않았어요!");
       }
       const data = await response.json();
+      console.log(data);
       setImgCard(data[0].download_url);
       console.log(formData);
       setLoading(false);
