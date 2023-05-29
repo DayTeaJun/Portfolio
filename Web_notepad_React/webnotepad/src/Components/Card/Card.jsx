@@ -55,7 +55,6 @@ export default function Card(props) {
                   <h2>{item.title}</h2>
                   <p>{item.content}</p>
                   <div>
-                    <p>{index + 1}번 카드</p>
                     <p>{date}</p>
                   </div>
                 </li>
@@ -150,10 +149,7 @@ const CardStyle = styled.article`
         align-items: center;
 
         & > p {
-          font-size: 0.6em;
-          color: black;
-        }
-        p + p {
+          margin-left: auto;
           text-decoration: underline;
           font-size: 0.6em;
           color: black;
