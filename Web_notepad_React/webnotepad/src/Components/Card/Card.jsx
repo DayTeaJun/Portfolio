@@ -7,15 +7,16 @@ export default function Card(props) {
   const date = today.toISOString().slice(0, 10);
 
   const cardDel = (e) => {
-    const idx = props.formData.find((item) => item.len == e.target.id);
+    const idx = props.formData.find((item) => e.target.id == item.len);
 
     // console.log(props.formData[2].len);
 
     if (idx) {
       props.formData.splice(
-        props.formData.findIndex((item) => item.len === true),
+        props.formData.findIndex((item) => item.len === idx.len),
         1
       );
+      console.log(props.formData);
       props.delFormData(props.formData);
     }
   };

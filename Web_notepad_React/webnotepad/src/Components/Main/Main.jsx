@@ -28,7 +28,7 @@ export default function Main() {
   const delFormData = (data) => {
     setFormData(data);
     setUserCard(false);
-    console.log(formData);
+    // console.log(formData);
   };
 
   const increaseNumber = () => {
