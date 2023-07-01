@@ -28,6 +28,7 @@ export default function Form({
         content: content,
         img: imgCard,
       };
+      localStorage.setItem("FormData", JSON.stringify(createFormData));
 
       // console.log(addFormData);
       addFormData(createFormData);
