@@ -40,11 +40,11 @@ export default function Form({
   function contentReset() {
     setTitle("");
     setContent("");
-    localStorage.removeItem("FormData");
   }
 
   function memoReset() {
     setFormData([]);
+    localStorage.removeItem("FormData");
   }
 
   return (
